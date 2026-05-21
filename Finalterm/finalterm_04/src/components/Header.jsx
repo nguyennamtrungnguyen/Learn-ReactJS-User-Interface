@@ -1,7 +1,7 @@
 // src/components/layout/Header.jsx
 
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -19,19 +19,23 @@ const Header = () => {
 
         {/* Navigation */}
         <nav className="hidden md:flex items-center gap-8 text-[15px] font-medium">
-          <button
-            onClick={() => navigate("/")}
-            className="hover:text-gray-500 transition duration-300"
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              `hover:text-gray-500 transition duration-300 ${isActive ? "text-blue-600" : "text-black"}`
+            }
           >
             Home
-          </button>
+          </NavLink>
 
-          <button
-            onClick={() => navigate("/about")}
-            className="hover:text-gray-500 transition duration-300"
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              `hover:text-gray-500 transition duration-300 ${isActive ? "text-blue-600" : "text-black"}`
+            }
           >
             About
-          </button>
+          </NavLink>
         </nav>
 
         {/* Actions */}
