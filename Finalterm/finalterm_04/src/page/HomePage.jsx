@@ -1,51 +1,10 @@
-import { Link, useNavigate } from "react-router-dom";
+
 
 const HomePage = () => {
-  const navigate = useNavigate();
   return (
     <section className="min-h-[70vh] bg-gray-50">
       {/* Navbar */}
-      <nav className="w-full border-b bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          {/* Logo */}
-          <h1 className="text-2xl font-bold text-blue-600">FinalTerm</h1>
-
-          {/* Menu */}
-          <div className="flex items-center gap-6 text-gray-700 font-medium">
-            <button
-              onClick={() => navigate("/")}
-              className="hover:text-blue-600 transition"
-            >
-              Home
-            </button>
-
-            <button
-              onClick={() => navigate("/about")}
-              className="hover:text-blue-600 transition"
-            >
-              About
-            </button>
-
-            <button
-              onClick={() => navigate("/contact")}
-              className="hover:text-blue-600 transition"
-            >
-              Contact
-            </button>
-          </div>
-
-          {/* Buttons */}
-          <div className="flex items-center gap-3">
-            <button className="px-5 py-2 rounded-lg border border-gray-300 hover:bg-gray-100 transition">
-              Login
-            </button>
-
-            <button className="px-5 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition">
-              Sign Up
-            </button>
-          </div>
-        </div>
-      </nav>
+    
 
       {/* Hero Section */}
       <div className="flex items-center justify-center px-6 py-24">

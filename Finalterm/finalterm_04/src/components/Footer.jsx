@@ -1,14 +1,6 @@
 // src/components/layout/Footer.jsx
 
 import React from "react";
-import {
-  Facebook,
-  Instagram,
-  Twitter,
-  Mail,
-  Phone,
-  MapPin,
-} from "lucide-react";
 
 const Footer = () => {
   return (
@@ -61,17 +53,14 @@ const Footer = () => {
 
           <div className="space-y-4 text-gray-400">
             <div className="flex items-center gap-3">
-              <Phone size={18} />
               <span>+84 123 456 789</span>
             </div>
 
             <div className="flex items-center gap-3">
-              <Mail size={18} />
               <span>support@dailyzone.com</span>
             </div>
 
             <div className="flex items-start gap-3">
-              <MapPin size={18} className="mt-1" />
               <span>Ho Chi Minh City, Vietnam</span>
             </div>
           </div>
@@ -82,17 +71,11 @@ const Footer = () => {
           <h2 className="text-xl font-semibold mb-4">Follow Us</h2>
 
           <div className="flex gap-4">
-            <button className="p-3 bg-gray-800 rounded-full hover:bg-white hover:text-black transition">
-              <Facebook size={20} />
-            </button>
+            <button className="p-3 bg-gray-800 rounded-full hover:bg-white hover:text-black transition"></button>
 
-            <button className="p-3 bg-gray-800 rounded-full hover:bg-white hover:text-black transition">
-              <Instagram size={20} />
-            </button>
+            <button className="p-3 bg-gray-800 rounded-full hover:bg-white hover:text-black transition"></button>
 
-            <button className="p-3 bg-gray-800 rounded-full hover:bg-white hover:text-black transition">
-              <Twitter size={20} />
-            </button>
+            <button className="p-3 bg-gray-800 rounded-full hover:bg-white hover:text-black transition"></button>
           </div>
         </div>
       </div>
