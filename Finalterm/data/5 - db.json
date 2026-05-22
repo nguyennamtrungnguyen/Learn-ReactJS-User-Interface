@@ -1,0 +1,76 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Áo Thun Cotton",
+      "price": 120000,
+      "description": "Áo thun 100% cotton, thoáng mát"
+    },
+    {
+      "id": 2,
+      "name": "Quần Jean Nam",
+      "price": 250000,
+      "description": "Quần jean dáng slim fit"
+    },
+    {
+      "id": 3,
+      "name": "Áo Sơ Mi Công Sở",
+      "price": 180000,
+      "description": "Áo sơ mi dài tay, vải poplin"
+    },
+    {
+      "id": 4,
+      "name": "Chân Váy Midi",
+      "price": 200000,
+      "description": "Chân váy xòe, cạp cao"
+    },
+    {
+      "id": 5,
+      "name": "Giày Sneakers",
+      "price": 350000,
+      "description": "Giày sneakers thời trang, đế cao su"
+    },
+    {
+      "id": 6,
+      "name": "Túi Xách Nữ",
+      "price": 400000,
+      "description": "Túi xách da PU, nhiều ngăn"
+    },
+    {
+      "id": 7,
+      "name": "Mũ Lưỡi Trai",
+      "price": 80000,
+      "description": "Mũ lưỡi trai thêu logo"
+    },
+    {
+      "id": 8,
+      "name": "Kính Mát Unisex",
+      "price": 150000,
+      "description": "Kính mát gọng nhựa, chống UV400"
+    },
+    {
+      "id": 9,
+      "name": "Đồng Hồ Thể Thao",
+      "price": 550000,
+      "description": "Đồng hồ điện tử chống nước 30m"
+    },
+    {
+      "id": 10,
+      "name": "Vớ Thể Thao",
+      "price": 50000,
+      "description": "Vớ cotton co giãn tốt"
+    }
+  ],
+  "delivery_orders": [
+    {
+      "id": 1,
+      "customerName": "Nguyễn Văn A",
+      "address": "123 Đường A, TP B",
+      "total": 370000,
+      "items": [
+        { "id": 1, "name": "Áo Thun Cotton", "price": 120000, "quantity": 1 },
+        { "id": 5, "name": "Giày Sneakers", "price": 350000, "quantity": 1 }
+      ]
+    }
+  ]
+}

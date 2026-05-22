@@ -36,6 +36,15 @@ const Header = () => {
           >
             About
           </NavLink>
+
+          <NavLink
+            to="/product"
+            className={({ isActive }) =>
+              `hover:text-gray-500 transition duration-300 ${isActive ? "text-blue-600" : "text-black"}`
+            }
+          >
+            Product
+          </NavLink>
         </nav>
 
         {/* Actions */}

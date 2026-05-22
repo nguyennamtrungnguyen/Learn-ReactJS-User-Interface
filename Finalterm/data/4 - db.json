@@ -1,0 +1,39 @@
+{
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Hoàn thành báo cáo",
+      "description": "Viết xong phần phân tích dữ liệu cho dự án AI",
+      "status": "pending",
+      "dueDate": "2025-06-01T17:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "title": "Học Redux Toolkit",
+      "description": "Xem và thực hành các bài tutorial cơ bản",
+      "status": "done",
+      "dueDate": "2025-05-25T12:00:00.000Z"
+    },
+    {
+      "id": "3",
+      "title": "Thiết kế UI Tailwind",
+      "description": "Tạo layout responsive cho trang Tasks",
+      "status": "pending",
+      "dueDate": "2025-05-30T09:00:00.000Z"
+    },
+    {
+      "id": "4",
+      "title": "Viết custom hook useFetch",
+      "description": "Cài đặt hook GET API và test",
+      "status": "pending",
+      "dueDate": "2025-05-28T15:30:00.000Z"
+    },
+    {
+      "id": "5",
+      "title": "Debug chức năng Edit Task",
+      "description": "Kiểm tra form load dữ liệu và submit thunk",
+      "status": "pending",
+      "dueDate": "2025-06-02T10:00:00.000Z"
+    }
+  ]
+}
