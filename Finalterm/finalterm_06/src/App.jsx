@@ -6,12 +6,10 @@ import Header from "./components/Header";
 
 function App() {
   return (
-    <>
-      <Provider store={store}>
-        {/* <Header /> */}
-        <RouterProvider router={router} />
-      </Provider>
-    </>
+    <Provider store={store}>
+      {/* <Header /> */}
+      <RouterProvider router={router} />
+    </Provider>
   );
 }
 
