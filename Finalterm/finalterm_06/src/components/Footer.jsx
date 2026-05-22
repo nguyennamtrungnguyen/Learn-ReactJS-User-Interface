@@ -1,43 +1,13 @@
-import { NavLink } from "react-router-dom";
+import React from "react";
 
-export default function Footer() {
+const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-gray-300">
-      <div className="max-w-6xl mx-auto px-6 py-8 grid grid-cols-2 gap-6">
-        <div>
-          <h4 className="text-lg font-semibold mb-2">MyApp</h4>
-          <p className="text-sm">© 2025 MyApp. All rights reserved.</p>
-        </div>
-        <div>
-          <h4 className="text-lg font-semibold mb-2">Liên kết</h4>
-          <ul className="space-y-1 text-sm">
-            <li>
-              <NavLink
-                to="/"
-                className={({ isActive }) =>
-                  `py-1 hover:text-indigo-600 transition font-medium ${
-                    isActive ? "text-indigo-600" : ""
-                  }`
-                }
-              >
-                Home
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/about"
-                className={({ isActive }) =>
-                  `py-1 hover:text-indigo-600 transition font-medium ${
-                    isActive ? "text-indigo-600" : ""
-                  }`
-                }
-              >
-                About
-              </NavLink>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </footer>
+    <div className="border-2 border-gray-500 flex flex-row justify-center items-center px-8 py-2">
+      <h1 className="font-bold text-3xl text-blue-500 text-center">
+        Nguyễn Nam Trung Nguyên - 23640731
+      </h1>
+    </div>
   );
-}
+};
+
+export default Footer;

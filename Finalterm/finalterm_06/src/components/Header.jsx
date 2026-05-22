@@ -1,43 +1,32 @@
-import { Link, NavLink } from "react-router-dom";
+import React from "react";
+import { NavLink } from "react-router-dom";
 
-export default function Header() {
+const Header = () => {
   return (
-    <header className="bg-white border-b border-gray-200 shadow-sm">
-      <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
-        <div className="text-3xl font-bold text-indigo-600">MyApp</div>
-        <nav className="flex space-x-8 text-gray-700">
-          <NavLink
-            to="/"
-            className={({ isActive }) =>
-              `py-1 hover:text-indigo-600 transition font-medium ${
-                isActive ? "text-indigo-600" : ""
-              }`
-            }
-          >
-            Home
-          </NavLink>
-          <NavLink
-            to="/about"
-            className={({ isActive }) =>
-              `py-1 hover:text-indigo-600 transition font-medium ${
-                isActive ? "text-indigo-600" : ""
-              }`
-            }
-          >
-            About
-          </NavLink>
-          <NavLink
-            to="/products"
-            className={({ isActive }) =>
-              `py-1 hover:text-indigo-600 transition font-medium ${
-                isActive ? "text-indigo-600" : ""
-              }`
-            }
-          >
-            Products
-          </NavLink>
-        </nav>
-      </div>
-    </header>
+    <div className="border-2 border-gray-500 flex flex-row justify-between items-center px-8 py-2">
+      <h1 className="font-bold text-3xl text-blue-500">Task App</h1>
+      <nav className="flex flex-row space-x-3">
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            `text-lg text-white bg-blue-300 cursor-pointer font-bold px-3 py-1 rounded-2xl  hover:text-blue-500 hover:bg-white
+          ${isActive ? "bg-blue-800" : ""}`
+          }
+        >
+          Trang chủ
+        </NavLink>
+        <NavLink
+          to="/task"
+          className={({ isActive }) =>
+            `text-lg text-white bg-blue-300 cursor-pointer font-bold px-3 py-1 rounded-2xl  hover:text-blue-500 hover:bg-white
+          ${isActive ? "bg-blue-800" : ""}`
+          }
+        >
+          Nhiệm vụ
+        </NavLink>
+      </nav>
+    </div>
   );
-}
+};
+
+export default Header;
