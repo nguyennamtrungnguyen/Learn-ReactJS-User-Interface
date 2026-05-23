@@ -20,7 +20,7 @@ const LoginPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (form.username === "admin" && form.password === "123456") {
+    if (form.username === "admin" && form.password === "123") {
       localStorage.setItem(
         "user",
         JSON.stringify({
@@ -68,7 +68,7 @@ const LoginPage = () => {
         </button>
 
         <p className="text-center text-sm text-gray-500">
-          Tài khoản: admin / 123456
+          Tài khoản: admin / 123
         </p>
       </form>
     </div>

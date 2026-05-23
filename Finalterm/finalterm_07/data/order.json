@@ -1,15 +1,15 @@
 {
   "orders": [
     {
-      "id": 1,
+      "id": "1",
       "customer": "Nguyễn Văn An",
       "address": "TP.HCM",
       "phone": "0901234567",
       "product": "Tai nghe Bluetooth",
-      "status": "pending"
+      "status": "shipping"
     },
     {
-      "id": 2,
+      "id": "2",
       "customer": "Trần Thị Mai",
       "address": "Hà Nội",
       "phone": "0912345678",
@@ -17,12 +17,109 @@
       "status": "shipping"
     },
     {
-      "id": 3,
+      "id": "3",
       "customer": "Lê Minh Hoàng",
       "address": "Đà Nẵng",
       "phone": "0988888888",
       "product": "Chuột gaming",
       "status": "delivered"
+    },
+    {
+      "id": "4",
+      "customer": "Phạm Quốc Huy",
+      "address": "Cần Thơ",
+      "phone": "0977777777",
+      "product": "Laptop Dell",
+      "status": "pending"
+    },
+    {
+      "id": "5",
+      "customer": "Đỗ Thị Lan",
+      "address": "Bình Dương",
+      "phone": "0966666666",
+      "product": "Màn hình LG",
+      "status": "shipping"
+    },
+    {
+      "id": "6",
+      "customer": "Ngô Văn Bình",
+      "address": "Đồng Nai",
+      "phone": "0955555555",
+      "product": "Bàn gaming",
+      "status": "delivered"
+    },
+    {
+      "id": "7",
+      "customer": "Võ Minh Tâm",
+      "address": "Huế",
+      "phone": "0944444444",
+      "product": "Ghế công thái học",
+      "status": "pending"
+    },
+    {
+      "id": "8",
+      "customer": "Lý Thu Trang",
+      "address": "Quảng Nam",
+      "phone": "0933333333",
+      "product": "Webcam Logitech",
+      "status": "shipping"
+    },
+    {
+      "id": "9",
+      "customer": "Trương Đức Anh",
+      "address": "Nha Trang",
+      "phone": "0922222222",
+      "product": "Ổ cứng SSD",
+      "status": "delivered"
+    },
+    {
+      "id": "10",
+      "customer": "Nguyễn Khánh Vy",
+      "address": "Vũng Tàu",
+      "phone": "0911111111",
+      "product": "Loa Bluetooth",
+      "status": "pending"
+    },
+    {
+      "id": "11",
+      "customer": "Bùi Công Nam",
+      "address": "Long An",
+      "phone": "0909999999",
+      "product": "Camera an ninh",
+      "status": "shipping"
+    },
+    {
+      "id": "12",
+      "customer": "Phan Mỹ Linh",
+      "address": "An Giang",
+      "phone": "0981231231",
+      "product": "Máy in Canon",
+      "status": "delivered"
+    },
+    {
+      "id": "13",
+      "customer": "Lê Thanh Sơn",
+      "address": "Kiên Giang",
+      "phone": "0971231231",
+      "product": "Router Wifi",
+      "status": "pending"
+    },
+    {
+      "id": "14",
+      "customer": "Trần Gia Hân",
+      "address": "Đắk Lắk",
+      "phone": "0961231231",
+      "product": "Apple Watch",
+      "status": "shipping"
+    },
+    {
+      "id": "15",
+      "customer": "Nguyễn Thành Đạt",
+      "address": "Gia Lai",
+      "phone": "0951231231",
+      "product": "iPad Air",
+      "status": "delivered"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

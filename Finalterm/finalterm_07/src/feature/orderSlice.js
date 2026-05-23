@@ -1,27 +1,39 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-const API_URL = "http://localhost:731/orders";
-
 export const fetchOrder = createAsyncThunk(
-  "order/fetchOrder",
+  "orderSlice/fetchOrder",
   async (_, { rejectWithValue }) => {
     try {
-      const localOrders = localStorage.getItem("orders");
-
-      if (localOrders) {
-        return JSON.parse(localOrders);
-      }
-
-      const res = await fetch(API_URL);
+      const res = await fetch("http://localhost:731/orders");
 
       if (!res.ok) {
-        return rejectWithValue("Không thể tải danh sách đơn hàng");
+        return rejectWithValue("Lỗi tải danh sách đơn hàng");
       }
 
-      const data = await res.json();
-      localStorage.setItem("orders", JSON.stringify(data));
+      return await res.json();
+    } catch (err) {
+      return rejectWithValue(err.message);
+    }
+  },
+);
 
-      return data;
+export const updateOrderStatus = createAsyncThunk(
+  "orderSlice/updateOrderStatus",
+  async ({ id, status }, { rejectWithValue }) => {
+    try {
+      const res = await fetch(`http://localhost:731/orders/${id}`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ status }),
+      });
+
+      if (!res.ok) {
+        return rejectWithValue("Lỗi cập nhật trạng thái");
+      }
+
+      return await res.json();
     } catch (err) {
       return rejectWithValue(err.message);
     }
@@ -37,19 +49,7 @@ const initialValue = {
 const orderSlice = createSlice({
   name: "order",
   initialState: initialValue,
-  reducers: {
-    updateOrderStatus: (state, action) => {
-      const { id, status } = action.payload;
-
-      const order = state.orders.find((item) => String(item.id) === String(id));
-
-      if (order) {
-        order.status = status;
-      }
-
-      localStorage.setItem("orders", JSON.stringify(state.orders));
-    },
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(fetchOrder.pending, (state) => {
@@ -63,10 +63,22 @@ const orderSlice = createSlice({
       .addCase(fetchOrder.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.payload;
+      })
+
+      .addCase(updateOrderStatus.fulfilled, (state, action) => {
+        const updatedOrder = action.payload;
+
+        const index = state.orders.findIndex(
+          (order) => String(order.id) === String(updatedOrder.id),
+        );
+
+        if (index !== -1) {
+          state.orders[index] = updatedOrder;
+        }
+
+        localStorage.setItem("orders", JSON.stringify(state.orders));
       });
   },
 });
-
-export const { updateOrderStatus } = orderSlice.actions;
 
 export default orderSlice.reducer;

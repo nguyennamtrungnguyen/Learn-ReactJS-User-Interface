@@ -10,7 +10,8 @@ const OrdersPage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const [statusFilter, setStatusFilter] = useState("All");
+  const [statusFilter, setStatusFilter] = useState("all");
+  const [selectedStatus, setSelectedStatus] = useState({});
 
   const { filteredOrders, isLoading, error } = useOrders(statusFilter);
 
@@ -18,25 +19,21 @@ const OrdersPage = () => {
     dispatch(fetchOrder());
   }, [dispatch]);
 
-  const handleUpdateStatus = (order) => {
-    let newStatus = "Pending";
+  const handleUpdateStatus = async (order) => {
+    const status = selectedStatus[order.id] || order.status;
 
-    if (order.status === "Pending") {
-      newStatus = "Shipping";
-    } else if (order.status === "Shipping") {
-      newStatus = "Delivered";
-    } else {
-      newStatus = "Pending";
+    try {
+      await dispatch(
+        updateOrderStatus({
+          id: order.id,
+          status,
+        }),
+      ).unwrap();
+
+      toast.success("Cập nhật trạng thái thành công");
+    } catch (error) {
+      toast.error("Cập nhật trạng thái thất bại");
     }
-
-    dispatch(
-      updateOrderStatus({
-        id: order.id,
-        status: newStatus,
-      }),
-    );
-
-    toast.success("Cập nhật trạng thái thành công");
   };
 
   const handleLogout = () => {
@@ -74,10 +71,10 @@ const OrdersPage = () => {
           onChange={(e) => setStatusFilter(e.target.value)}
           className="border px-3 py-2 rounded"
         >
-          <option value="All">All</option>
-          <option value="Pending">Pending</option>
-          <option value="Shipping">Shipping</option>
-          <option value="Delivered">Delivered</option>
+          <option value="all">All</option>
+          <option value="pending">Pending</option>
+          <option value="shipping">Shipping</option>
+          <option value="delivered">Delivered</option>
         </select>
       </div>
 
@@ -104,10 +101,25 @@ const OrdersPage = () => {
               filteredOrders.map((order) => (
                 <tr key={order.id}>
                   <td className="border p-3">{order.id}</td>
-                  <td className="border p-3">{order.customerName}</td>
+                  <td className="border p-3">{order.customer}</td>
                   <td className="border p-3">{order.product}</td>
-                  <td className="border p-3">{order.status}</td>
-                  <td className="border p-3 space-x-2">
+                  <td className="border p-3">
+                    <select
+                      value={selectedStatus[order.id] || order.status}
+                      onChange={(e) =>
+                        setSelectedStatus({
+                          ...selectedStatus,
+                          [order.id]: e.target.value,
+                        })
+                      }
+                      className="border px-2 py-1 rounded"
+                    >
+                      <option value="pending">Pending</option>
+                      <option value="shipping">Shipping</option>
+                      <option value="delivered">Delivered</option>
+                    </select>
+                  </td>
+                  <td className="border p-3 space-x-2 flex justify-between">
                     <button
                       onClick={() => navigate(`/orders/${order.id}`)}
                       className="bg-blue-500 text-white px-3 py-1 rounded"

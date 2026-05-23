@@ -39,7 +39,7 @@ const OrderDetailPage = () => {
         <h1 className="text-2xl font-bold mb-4">Chi tiết đơn hàng</h1>
 
         <p>
-          <b>Tên khách hàng:</b> {order.customerName}
+          <b>Tên khách hàng:</b> {order.customer}
         </p>
 
         <p>

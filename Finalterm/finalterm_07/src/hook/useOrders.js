@@ -5,7 +5,7 @@ export const useOrders = (statusFilter) => {
   const { orders, isLoading, error } = useSelector((state) => state.order);
 
   const filteredOrders = useMemo(() => {
-    if (statusFilter === "All") {
+    if (statusFilter === "all") {
       return orders;
     }
 
@@ -13,7 +13,6 @@ export const useOrders = (statusFilter) => {
   }, [orders, statusFilter]);
 
   return {
-    orders,
     filteredOrders,
     isLoading,
     error,
