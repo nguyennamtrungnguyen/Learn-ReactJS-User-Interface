@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "customer": "Nguyễn Văn An",
+    "address": "TP.HCM",
+    "phone": "0901234567",
+    "product": "Tai nghe Bluetooth",
+    "status": "pending"
+  },
+  {
+    "id": 2,
+    "customer": "Trần Thị Mai",
+    "address": "Hà Nội",
+    "phone": "0912345678",
+    "product": "Bàn phím cơ",
+    "status": "shipping"
+  },
+  {
+    "id": 3,
+    "customer": "Lê Minh Hoàng",
+    "address": "Đà Nẵng",
+    "phone": "0988888888",
+    "product": "Chuột gaming",
+    "status": "delivered"
+  },
+  {
+    "id": 4,
+    "customer": "Nguyễn Văn Bình",
+    "address": "Cần Thơ",
+    "phone": "0977123456",
+    "product": "Laptop Dell Inspiron",
+    "status": "pending"
+  },
+  {
+    "id": 5,
+    "customer": "Phạm Thị Lan",
+    "address": "Huế",
+    "phone": "0933444555",
+    "product": "Màn hình LG 24 inch",
+    "status": "shipping"
+  },
+  {
+    "id": 6,
+    "customer": "Đặng Minh Tú",
+    "address": "Nha Trang",
+    "phone": "0966555777",
+    "product": "Loa Bluetooth JBL",
+    "status": "delivered"
+  },
+  {
+    "id": 7,
+    "customer": "Hoàng Gia Huy",
+    "address": "Bình Dương",
+    "phone": "0909988776",
+    "product": "iPhone 15 Pro Max",
+    "status": "pending"
+  },
+  {
+    "id": 8,
+    "customer": "Nguyễn Thị Lan",
+    "address": "Vũng Tàu",
+    "phone": "0911222333",
+    "product": "Apple Watch Series 9",
+    "status": "shipping"
+  },
+  {
+    "id": 9,
+    "customer": "Trương Minh Khang",
+    "address": "Biên Hòa",
+    "phone": "0988111222",
+    "product": "Camera Logitech C920",
+    "status": "delivered"
+  },
+  {
+    "id": 10,
+    "customer": "Bùi Thanh Tâm",
+    "address": "Long An",
+    "phone": "0977666888",
+    "product": "SSD Samsung 1TB",
+    "status": "pending"
+  },
+  {
+    "id": 11,
+    "customer": "Lý Khánh Vy",
+    "address": "Quảng Ngãi",
+    "phone": "0944555666",
+    "product": "Máy in Canon",
+    "status": "shipping"
+  },
+  {
+    "id": 12,
+    "customer": "Phan Đức Nam",
+    "address": "Kiên Giang",
+    "phone": "0922333444",
+    "product": "PC Gaming RTX 4060",
+    "status": "delivered"
+  },
+  {
+    "id": 13,
+    "customer": "Ngô Minh Nhật",
+    "address": "An Giang",
+    "phone": "0955444333",
+    "product": "Bàn gaming",
+    "status": "pending"
+  },
+  {
+    "id": 14,
+    "customer": "Võ Thanh Tùng",
+    "address": "Tây Ninh",
+    "phone": "0933666777",
+    "product": "Micro HyperX",
+    "status": "shipping"
+  },
+  {
+    "id": 15,
+    "customer": "Dương Khánh Linh",
+    "address": "Bạc Liêu",
+    "phone": "0911777888",
+    "product": "Máy tính bảng Samsung",
+    "status": "delivered"
+  },
+  {
+    "id": 16,
+    "customer": "Lê Quốc Khánh",
+    "address": "Phú Quốc",
+    "phone": "0988333444",
+    "product": "Router Wifi TP-Link",
+    "status": "pending"
+  },
+  {
+    "id": 17,
+    "customer": "Trịnh Minh Anh",
+    "address": "Đồng Nai",
+    "phone": "0977999000",
+    "product": "Bàn phím Logitech",
+    "status": "shipping"
+  },
+  {
+    "id": 18,
+    "customer": "Nguyễn Hữu Phúc",
+    "address": "Sóc Trăng",
+    "phone": "0909111222",
+    "product": "Tai nghe Sony WH-1000XM5",
+    "status": "delivered"
+  },
+  {
+    "id": 19,
+    "customer": "Phạm Gia Bảo",
+    "address": "Gia Lai",
+    "phone": "0933111444",
+    "product": "Webcam Razer",
+    "status": "pending"
+  },
+  {
+    "id": 20,
+    "customer": "Đỗ Thị Hồng",
+    "address": "Kon Tum",
+    "phone": "0966888999",
+    "product": "Ổ cứng HDD 2TB",
+    "status": "shipping"
+  }
+]
