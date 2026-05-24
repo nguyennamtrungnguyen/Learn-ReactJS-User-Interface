@@ -5,7 +5,6 @@ import { addOrder } from "../feature/orderSlice";
 import { useDispatch } from "react-redux";
 
 const OrderForm = ({ onClose }) => {
-  const navigate = useNavigate();
   const inputRef = useRef();
   const dispatch = useDispatch();
 
@@ -133,7 +132,7 @@ const OrderForm = ({ onClose }) => {
                 Trạng thái
               </label>
               <select
-                type="text"
+
                 value={form.status}
                 onChange={handleChange}
                 name="status"

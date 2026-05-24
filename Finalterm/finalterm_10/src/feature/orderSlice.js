@@ -74,9 +74,7 @@ export const fetchOrder = createAsyncThunk(
       const localData = localStorage.getItem("orders");
 
       if (localData) {
-        if (localData) {
-          return JSON.parse(localData);
-        }
+        return JSON.parse(localData);
       }
 
       const res = await fetch("/public/data/order.json");
@@ -90,5 +88,6 @@ export const fetchOrder = createAsyncThunk(
   },
 );
 
-export const { addOrder, updateOrder, updateStatusOrder, deleteOrder } = orderSlice.actions;
+export const { addOrder, updateOrder, updateStatusOrder, deleteOrder } =
+  orderSlice.actions;
 export default orderSlice.reducer;

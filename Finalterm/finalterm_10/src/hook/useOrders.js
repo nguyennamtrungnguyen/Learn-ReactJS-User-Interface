@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 
 export const useOrders = (status) => {
-  const { orders, loading, error } = useSelector((status) => status.order);
+  const { orders, loading, error } = useSelector((state) => state.order);
 
   const filteredStatusOrders =
     status === "All"

@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "customer": "Khách hàng 1",
+    "address": "TP.HCM",
+    "phone": "0900000001",
+    "product": "Tai nghe Bluetooth",
+    "status": "pending"
+  },
+  {
+    "id": 2,
+    "customer": "Khách hàng 2",
+    "address": "Hà Nội",
+    "phone": "0900000002",
+    "product": "Bàn phím cơ",
+    "status": "shipping"
+  },
+  {
+    "id": 3,
+    "customer": "Khách hàng 3",
+    "address": "Đà Nẵng",
+    "phone": "0900000003",
+    "product": "Chuột gaming",
+    "status": "delivered"
+  },
+  {
+    "id": 4,
+    "customer": "Khách hàng 4",
+    "address": "Cần Thơ",
+    "phone": "0900000004",
+    "product": "Laptop Dell",
+    "status": "pending"
+  },
+  {
+    "id": 5,
+    "customer": "Khách hàng 5",
+    "address": "Huế",
+    "phone": "0900000005",
+    "product": "Màn hình LG",
+    "status": "shipping"
+  },
+  {
+    "id": 6,
+    "customer": "Khách hàng 6",
+    "address": "Nha Trang",
+    "phone": "0900000006",
+    "product": "Loa JBL",
+    "status": "delivered"
+  },
+  {
+    "id": 7,
+    "customer": "Khách hàng 7",
+    "address": "Bình Dương",
+    "phone": "0900000007",
+    "product": "iPhone 15",
+    "status": "pending"
+  },
+  {
+    "id": 8,
+    "customer": "Khách hàng 8",
+    "address": "Vũng Tàu",
+    "phone": "0900000008",
+    "product": "Apple Watch",
+    "status": "shipping"
+  },
+  {
+    "id": 9,
+    "customer": "Khách hàng 9",
+    "address": "Biên Hòa",
+    "phone": "0900000009",
+    "product": "Camera Logitech",
+    "status": "delivered"
+  },
+  {
+    "id": 10,
+    "customer": "Khách hàng 10",
+    "address": "Long An",
+    "phone": "0900000010",
+    "product": "SSD Samsung",
+    "status": "pending"
+  },
+  {
+    "id": 11,
+    "customer": "Khách hàng 11",
+    "address": "TP.HCM",
+    "phone": "0900000011",
+    "product": "Tai nghe Bluetooth",
+    "status": "shipping"
+  },
+  {
+    "id": 12,
+    "customer": "Khách hàng 12",
+    "address": "Hà Nội",
+    "phone": "0900000012",
+    "product": "Bàn phím cơ",
+    "status": "delivered"
+  },
+  {
+    "id": 13,
+    "customer": "Khách hàng 13",
+    "address": "Đà Nẵng",
+    "phone": "0900000013",
+    "product": "Chuột gaming",
+    "status": "pending"
+  },
+  {
+    "id": 14,
+    "customer": "Khách hàng 14",
+    "address": "Cần Thơ",
+    "phone": "0900000014",
+    "product": "Laptop Dell",
+    "status": "shipping"
+  },
+  {
+    "id": 15,
+    "customer": "Khách hàng 15",
+    "address": "Huế",
+    "phone": "0900000015",
+    "product": "Màn hình LG",
+    "status": "delivered"
+  },
+  {
+    "id": 16,
+    "customer": "Khách hàng 16",
+    "address": "Nha Trang",
+    "phone": "0900000016",
+    "product": "Loa JBL",
+    "status": "pending"
+  },
+  {
+    "id": 17,
+    "customer": "Khách hàng 17",
+    "address": "Bình Dương",
+    "phone": "0900000017",
+    "product": "iPhone 15",
+    "status": "shipping"
+  },
+  {
+    "id": 18,
+    "customer": "Khách hàng 18",
+    "address": "Vũng Tàu",
+    "phone": "0900000018",
+    "product": "Apple Watch",
+    "status": "delivered"
+  },
+  {
+    "id": 19,
+    "customer": "Khách hàng 19",
+    "address": "Biên Hòa",
+    "phone": "0900000019",
+    "product": "Camera Logitech",
+    "status": "pending"
+  },
+  {
+    "id": 20,
+    "customer": "Khách hàng 20",
+    "address": "Long An",
+    "phone": "0900000020",
+    "product": "SSD Samsung",
+    "status": "shipping"
+  }
+]
