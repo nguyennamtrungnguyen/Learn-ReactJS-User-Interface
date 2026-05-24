@@ -10,6 +10,25 @@ const orderSlice = createSlice({
   name: "order",
   initialState: initialValue,
   reducers: {
+    // them
+    addOrder: (state, action) => {
+      state.orders.push(action.payload);
+      localStorage.setItem("orders", JSON.stringify(state.orders));
+    },
+
+    // sua
+    updateOrder: (state, action) => {
+      const { id } = action.payload;
+      const index = state.orders.findIndex((item) => item.id === id);
+
+      if (index !== -1) {
+        state.orders[index] = action.payload;
+      }
+
+      localStorage.setItem("orders", JSON.stringify(state.orders));
+    },
+
+    // sua trang thai
     updateStatusOrder: (state, action) => {
       const { id, status } = action.payload;
       const order = state.orders.find((item) => item.id === id);
@@ -17,6 +36,15 @@ const orderSlice = createSlice({
       if (order) {
         order.status = status;
       }
+
+      localStorage.setItem("orders", JSON.stringify(state.orders));
+    },
+
+    // xoa don hang
+    deleteOrder: (state, action) => {
+      const id = action.payload;
+
+      state.orders = state.orders.filter((item) => item.id !== id);
 
       localStorage.setItem("orders", JSON.stringify(state.orders));
     },
@@ -62,5 +90,5 @@ export const fetchOrder = createAsyncThunk(
   },
 );
 
-export const { updateStatusOrder } = orderSlice.actions;
+export const { addOrder, updateOrder, updateStatusOrder, deleteOrder } = orderSlice.actions;
 export default orderSlice.reducer;

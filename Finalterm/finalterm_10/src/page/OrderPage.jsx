@@ -1,9 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { fetchOrder, updateStatusOrder } from "../feature/orderSlice";
+import {
+  deleteOrder,
+  fetchOrder,
+  updateStatusOrder,
+} from "../feature/orderSlice";
 import { useOrders } from "../hook/useOrders";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import OrderForm from "../components/OrderForm";
 
 const OrderPage = () => {
   const dispatch = useDispatch();
@@ -13,6 +18,8 @@ const OrderPage = () => {
   const [status, setStatus] = useState("All");
 
   const { orders, loading, error } = useOrders(status);
+
+  const [showForm, setShowForm] = useState(false);
 
   useEffect(() => {
     dispatch(fetchOrder());
@@ -57,7 +64,7 @@ const OrderPage = () => {
           Đăng xuất
         </button>
       </div>
-      <div className="mb-5">
+      <div className="mb-5 flex justify-between">
         <select
           className="border-2 rounded-xl px-4 py-1 mt-5"
           value={status}
@@ -68,7 +75,14 @@ const OrderPage = () => {
           <option value="shipping">Shipping</option>
           <option value="delivered">Delivered</option>
         </select>
+        <button
+          onClick={() => setShowForm(true)}
+          className="bg-green-500 hover:bg-green-800 cursor-pointer px-4 py-1 mt-5 rounded-2xl text-white"
+        >
+          + Đơn Hàng
+        </button>
       </div>
+      {showForm && <OrderForm onClose={() => setShowForm(false)} />}
       <table className="w-full border">
         <thead>
           <tr className="bg-gray-200">
@@ -99,6 +113,12 @@ const OrderPage = () => {
                     className="bg-yellow-500 hover:bg-yellow-800 cursor-pointer p-2 rounded-2xl text-white"
                   >
                     Cập nhập trạng thái
+                  </button>{" "}
+                  <button
+                    onClick={() => dispatch(deleteOrder(order.id))}
+                    className="px-5 bg-red-500 hover:bg-red-800 cursor-pointer p-2 rounded-2xl text-white"
+                  >
+                    Xóa
                   </button>
                 </div>
               </th>
