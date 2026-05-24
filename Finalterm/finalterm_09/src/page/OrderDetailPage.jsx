@@ -11,8 +11,8 @@ const OrderDetailPage = () => {
   const order = orders.find((item) => item.id == id);
 
   return (
-    <div className="p-8">
-      <div className="border p-6 rounded-xl space-y-3">
+    <div className="p-8 w-full flex justify-center">
+      <div className="border p-6 rounded-xl space-y-3 w-[500px]">
         <h1 className="text-2xl font-bold">Chi tiết đơn hàng</h1>
 
         <p>Mã đơn: {order.id}</p>
